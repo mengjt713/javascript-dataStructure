@@ -76,5 +76,8 @@ function change(num, base) {
 
 }
 console.log(change(32,2))
+console.log(change(32,8))
 
-
+/*
+* 回文的用法&递归的用法
+* */
