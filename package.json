@@ -1,0 +1,19 @@
+{
+  "name": "javascript-datastructure",
+  "version": "1.0.0",
+  "description": "js 数据结构",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mengjt713/javascript-dataStructure.git"
+  },
+  "author": "jintao.meng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mengjt713/javascript-dataStructure/issues"
+  },
+  "homepage": "https://github.com/mengjt713/javascript-dataStructure#readme"
+}
