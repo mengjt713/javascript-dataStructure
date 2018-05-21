@@ -6,9 +6,6 @@ function Node(data,left,right){
     this.left = left;
     this.right = right;
     this.show = show;
-    this.getMin= getMin;
-    this.getMax = getMax;
-    this.find = find;
 }
 function show() {
     return this.data
@@ -18,6 +15,11 @@ function BST(){
     this.root = null;
     this.insert = insert;
     this.inOrder = inOrder;
+    this.getMin= getMin;
+    this.getMax = getMax;
+    this.find = find;
+    this.remove = remove;
+
 }
 /*
 * 插入节点
@@ -119,6 +121,41 @@ function find(data){
     return null;
 }
 
+/*
+* 删除
+* */
+function remove(data){
+    root = removeNode(this.root,data);
+}
+
+function removeNode(node,data){
+    if(node == null){
+        return null;
+    }
+    if(data == node.data){
+        //无子节点
+        if(node.left == null && node.right == null){
+            return null;
+        }
+        if(node.left == null){
+            return node.right;
+        }
+        if(node.right == null){
+            return node.left;
+        }
+        var tempNode = getSmallest(node.right);
+        node.data = tempNode.data;
+        node.right = removeNode(node.right,tempNode.data);
+        return node;
+    }else if(data < node.data){
+        node.left = removeNode(node.left,data);
+        return node;
+    }else{
+        node.right =removeNode(node.right,data);
+        return node;
+    }
+
+}
 
 var nums = new BST();
 nums.insert(23);
